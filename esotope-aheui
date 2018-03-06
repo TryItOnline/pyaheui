@@ -99,7 +99,7 @@ class AheuiIO(object):
             str = self.getunichar()
         while char.isdigit():
             char = self.getunichar()
-            str += char
+            str += char or u' '
         return sign * int(str[:-1])
     
     def putint(self, value):
